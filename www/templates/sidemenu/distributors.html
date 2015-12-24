@@ -1,0 +1,10 @@
+<ion-view title="Liste de distributeurs">
+    <ion-content ng-controller="distributorsController as vm">
+        <div class="list">
+            <a class="item item-icon-right" ng-repeat="distibutor in vm.distibutors" ng-click="vm.getMovies(distibutor)">
+                {{distibutor.filmography}}
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view ng-controller="movieDetailController as vm" title="{{vm.movieTitle}}">
+    <ion-content>
+        <div class="list card" ng-if="vm.finished">
+            <div class="item">
+                <h2>{{vm.movieName}}</h2>
+                <p>
+                    <i ng-repeat="genre in vm.genres">{{genre.name}}{{$last ? '' : ', '}}</i>
+                </p>
+            </div>
+            <div class="item item-body">
+                <div class="item item-image">
+                    <img src="img/lord.jpg">
+                </div>
+                <p>
+                    {{vm.overview}}
+                </p>
+                <div class="item item-checkbox">
+                    <h2>{{vm.favorit ? "Retirer des favoris" : "Ajouter aux favoris"}}</h2>
+                    <label class="checkbox">
+                        <input type="checkbox" ng-model="vm.favorit" ng-change="vm.favoritChange()">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

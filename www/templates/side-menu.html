@@ -1,0 +1,21 @@
+<ion-side-menus>
+    <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-balanced">
+            <ion-nav-back-button class="button-clear"></ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="main-content"></ion-nav-view>
+    </ion-pane>
+    <ion-side-menu side="left">
+        <header class="bar bar-header bar-positive">Movies App</header>
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item nav-clear menu-close ui-sref="home.companies">Accueil</ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.distributors">Distributeurs</ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.extra">Extra</ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

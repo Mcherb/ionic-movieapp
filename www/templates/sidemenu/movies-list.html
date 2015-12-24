@@ -1,0 +1,10 @@
+<ion-view title="Liste de films">
+    <ion-content ng-controller="moviesListController as vm" class="has-header">
+        <div class="list">
+            <!-- <a class="item item-icon-right" ng-repeat="item in vm.movies"> -->
+            <a class="item item-icon-right" collection-repeat="item in vm.movies" ui-sref="app.movie-detail({'movie': item.movie.id, 'movieTitle': item.movie.name})">
+                {{item.movie.name}}
+            </a>
+        </div>
+    </ion-content>
+</ion-view>
